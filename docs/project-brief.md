@@ -60,9 +60,9 @@ Cumple con los estándares de responsividad y accesibilidad
 
 ### Key Sections/Pages
 
-1. Hero
-2.
-3.
+1. Landing Page
+2. Single page for each project
+3. Photos' Grid to explain and show visually the project
 
 ### Content Sources
 
