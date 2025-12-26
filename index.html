@@ -11,8 +11,19 @@
       rel="stylesheet"
     />
 
-    <!-- Custom Styles -->
+    <!-- Fuentes Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/layout.css" />
     <link rel="stylesheet" href="./assets/css/otros.css" />
+
     <!-- Custom Scripts -->
     <script src="./assets/js/main.js" defer></script>
   </head>
@@ -34,12 +45,15 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a>Andrea Xiangfan</a>
+            </li>
             <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
+              <a class="nav-link" href="#works">Works</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
+              <a class="nav-link" href="#projects">About Me</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
@@ -65,19 +79,9 @@
           <div class="shape shape-3"></div>
         </div>
 
-        <div class="container position-relative z-1 text-center text-white">
-          <h1 class="display-1 fw-bold hero-title">John Designer</h1>
-          <p class="lead hero-subtitle mb-4">
-            Full-Stack Developer & Creative Technologist
-          </p>
-          <div class="hero-cta">
-            <a href="#projects" class="btn btn-primary btn-lg me-3"
-              >View Projects</a
-            >
-            <a href="#contact" class="btn btn-outline-light btn-lg"
-              >Get in Touch</a
-            >
-          </div>
+        <div class="container-info-home">
+          <p class="display-1 fw-bold hero-title">2026</p>
+          <p>Portfolio</p>
         </div>
 
         <!-- Scroll indicator -->
@@ -88,254 +92,140 @@
         </div>
       </section>
 
-      <!-- About Section -->
-      <section id="about" class="py-5 py-lg-6 bg-dark">
-        <div class="container">
-          <div class="row align-items-center g-5">
-            <div class="col-lg-6">
-              <div class="about-image gsap-reveal">
-                <img
-                  src="https://picsum.photos/600/700?random=10"
-                  alt="Profile"
-                  class="img-fluid rounded-4 shadow-lg"
-                />
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <h2 class="display-5 fw-bold mb-4 gsap-reveal">About Me</h2>
-              <p class="lead text-muted mb-4 gsap-reveal">
-                I'm a creative developer passionate about building beautiful,
-                functional, and accessible digital experiences.
-              </p>
-              <p class="text-muted gsap-reveal">
-                With 7+ years of experience spanning front-end development,
-                UI/UX design, and motion graphics, I bring a unique perspective
-                to every project. I believe in the power of animation to enhance
-                user experience without sacrificing performance.
-              </p>
-
-              <!-- Skills with animated progress -->
-              <div class="skills mt-5">
-                <div class="skill-item gsap-reveal mb-3">
-                  <div class="d-flex justify-content-between mb-2">
-                    <span class="fw-semibold">React / Next.js</span>
-                    <span class="text-muted">95%</span>
-                  </div>
-                  <div class="progress" style="height: 8px">
-                    <div class="progress-bar skill-bar" data-width="95"></div>
-                  </div>
-                </div>
-                <div class="skill-item gsap-reveal mb-3">
-                  <div class="d-flex justify-content-between mb-2">
-                    <span class="fw-semibold">GSAP / Animation</span>
-                    <span class="text-muted">90%</span>
-                  </div>
-                  <div class="progress" style="height: 8px">
-                    <div class="progress-bar skill-bar" data-width="90"></div>
-                  </div>
-                </div>
-                <div class="skill-item gsap-reveal mb-3">
-                  <div class="d-flex justify-content-between mb-2">
-                    <span class="fw-semibold">Node.js / Express</span>
-                    <span class="text-muted">85%</span>
-                  </div>
-                  <div class="progress" style="height: 8px">
-                    <div class="progress-bar skill-bar" data-width="85"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- Projects Section -->
-      <section id="projects" class="py-5 py-lg-6">
-        <div class="container">
-          <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold gsap-reveal">Featured Projects</h2>
-            <p class="lead text-muted gsap-reveal">
-              A selection of my recent work
-            </p>
-          </div>
-
-          <div class="row g-4">
-            <!-- Project Card 1 -->
-            <div class="col-md-6 col-lg-4">
-              <article class="card project-card h-100 border-0 shadow-sm">
-                <div class="card-img-wrapper overflow-hidden">
-                  <img
-                    src="https://picsum.photos/400/300?random=1"
-                    class="card-img-top"
-                    alt="E-commerce Platform"
-                  />
-                </div>
-                <div class="card-body">
-                  <h3 class="card-title h5">E-commerce Platform</h3>
-                  <p class="card-text text-muted small">
-                    Full-stack e-commerce solution with real-time inventory and
-                    Stripe integration.
-                  </p>
-                  <div class="d-flex flex-wrap gap-2">
-                    <span class="badge bg-primary-subtle text-primary"
-                      >React</span
-                    >
-                    <span class="badge bg-primary-subtle text-primary"
-                      >Node.js</span
-                    >
-                    <span class="badge bg-primary-subtle text-primary"
-                      >MongoDB</span
-                    >
-                  </div>
-                </div>
-              </article>
-            </div>
-
-            <!-- Project Card 2 -->
-            <div class="col-md-6 col-lg-4">
-              <article class="card project-card h-100 border-0 shadow-sm">
-                <div class="card-img-wrapper overflow-hidden">
-                  <img
-                    src="https://picsum.photos/400/300?random=2"
-                    class="card-img-top"
-                    alt="Dashboard UI"
-                  />
-                </div>
-                <div class="card-body">
-                  <h3 class="card-title h5">Analytics Dashboard</h3>
-                  <p class="card-text text-muted small">
-                    Real-time data visualization with interactive charts and
-                    dark mode.
-                  </p>
-                  <div class="d-flex flex-wrap gap-2">
-                    <span class="badge bg-primary-subtle text-primary"
-                      >D3.js</span
-                    >
-                    <span class="badge bg-primary-subtle text-primary"
-                      >WebSocket</span
-                    >
-                    <span class="badge bg-primary-subtle text-primary"
-                      >GSAP</span
-                    >
-                  </div>
-                </div>
-              </article>
-            </div>
-
-            <!-- Project Card 3 -->
-            <div class="col-md-6 col-lg-4">
-              <article class="card project-card h-100 border-0 shadow-sm">
-                <div class="card-img-wrapper overflow-hidden">
-                  <img
-                    src="https://picsum.photos/400/300?random=3"
-                    class="card-img-top"
-                    alt="Mobile App"
-                  />
-                </div>
-                <div class="card-body">
-                  <h3 class="card-title h5">Fitness Mobile App</h3>
-                  <p class="card-text text-muted small">
-                    Cross-platform fitness tracker with workout plans and
-                    progress analytics.
-                  </p>
-                  <div class="d-flex flex-wrap gap-2">
-                    <span class="badge bg-primary-subtle text-primary"
-                      >React Native</span
-                    >
-                    <span class="badge bg-primary-subtle text-primary"
-                      >Firebase</span
-                    >
-                  </div>
-                </div>
-              </article>
-            </div>
-
-            <!-- Project Card 4 -->
-            <div class="col-md-6 col-lg-4">
-              <article class="card project-card h-100 border-0 shadow-sm">
-                <div class="card-img-wrapper overflow-hidden">
-                  <img
-                    src="https://picsum.photos/400/300?random=4"
-                    class="card-img-top"
-                    alt="Portfolio Site"
-                  />
-                </div>
-                <div class="card-body">
-                  <h3 class="card-title h5">Agency Website</h3>
-                  <p class="card-text text-muted small">
-                    Award-winning agency site with scroll-driven animations and
-                    3D elements.
-                  </p>
-                  <div class="d-flex flex-wrap gap-2">
-                    <span class="badge bg-primary-subtle text-primary"
-                      >Three.js</span
-                    >
-                    <span class="badge bg-primary-subtle text-primary"
-                      >GSAP</span
-                    >
-                  </div>
-                </div>
-              </article>
-            </div>
-
-            <!-- Project Card 5 -->
-            <div class="col-md-6 col-lg-4">
-              <article class="card project-card h-100 border-0 shadow-sm">
-                <div class="card-img-wrapper overflow-hidden">
-                  <img
-                    src="https://picsum.photos/400/300?random=5"
-                    class="card-img-top"
-                    alt="SaaS Platform"
-                  />
-                </div>
-                <div class="card-body">
-                  <h3 class="card-title h5">SaaS Platform</h3>
-                  <p class="card-text text-muted small">
-                    Multi-tenant SaaS with role-based access and subscription
-                    management.
-                  </p>
-                  <div class="d-flex flex-wrap gap-2">
-                    <span class="badge bg-primary-subtle text-primary"
-                      >Next.js</span
-                    >
-                    <span class="badge bg-primary-subtle text-primary"
-                      >Prisma</span
-                    >
-                  </div>
-                </div>
-              </article>
-            </div>
-
-            <!-- Project Card 6 -->
-            <div class="col-md-6 col-lg-4">
-              <article class="card project-card h-100 border-0 shadow-sm">
-                <div class="card-img-wrapper overflow-hidden">
-                  <img
-                    src="https://picsum.photos/400/300?random=6"
-                    class="card-img-top"
-                    alt="AI Tool"
-                  />
-                </div>
-                <div class="card-body">
-                  <h3 class="card-title h5">AI Content Generator</h3>
-                  <p class="card-text text-muted small">
-                    GPT-powered content creation tool with custom fine-tuning
-                    options.
-                  </p>
-                  <div class="d-flex flex-wrap gap-2">
-                    <span class="badge bg-primary-subtle text-primary"
-                      >OpenAI</span
-                    >
-                    <span class="badge bg-primary-subtle text-primary"
-                      >Python</span
-                    >
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
+      <section id="works">
+        <h1>Works</h1>
+<div class="container">
+  <div class="row g-4">
+    <!-- Proyecto 1 -->
+    <div class="col-12 col-md-6">
+      <div class="card project-card">
+        <img src="https://ik.imagekit.io/lnj040m143/Imgs%20Portfolio/Vodafone_PoleSign.png" class="card-img-top" alt="Proyecto 1">
+        <div >
+          <h5 class="card-title">Vodafone (Re)Branding</h5>
+          <p class="card-text">Visual Identity</p>
         </div>
+      </div>
+    </div>
+
+    <!-- Proyecto 2 -->
+    <div class="col-12 col-md-6">
+      <div class="card project-card">
+        <img src="project-2.webp" class="card-img-top" alt="Proyecto 2">
+        <div class="card-body">
+          <h5 class="card-title">Título del Proyecto</h5>
+          <p class="card-text">Subtítulo o descripción breve</p>
+        </div>
+      </div>
+    </div>
+        <div class="projects-grid">
+          <article class="project">
+            <div class="col-sm-8 col-md-6 project-media parallax">
+              <img
+                src="https://ik.imagekit.io/lnj040m143/Imgs%20Portfolio/Vodafone_PoleSign.png"
+                alt="Proyecto Editorial"
+              />
+            </div>
+            <div class="project-info">
+              <h2 class="project-title">Vodafone (Re)Branding</h2>
+              <h3 class="project-subtitle">Visual Identity</h3>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-media parallax">
+              <img
+                src="https://ik.imagekit.io/lnj040m143/Imgs%20Portfolio/Vodafone_PoleSign.png"
+                alt="Proyecto Editorial"
+              />
+            </div>
+            <div class="project-info">
+              <h2 class="project-title">Vodafone (Re)Branding</h2>
+              <h3 class="project-subtitle">Visual Identity</h3>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-media parallax">
+              <img
+                src="https://ik.imagekit.io/lnj040m143/Imgs%20Portfolio/Vodafone_PoleSign.png"
+                alt="Proyecto Editorial"
+              />
+            </div>
+            <div class="project-info">
+              <h2 class="project-title">Vodafone (Re)Branding</h2>
+              <h3 class="project-subtitle">Visual Identity</h3>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-media parallax">
+              <img
+                src="https://ik.imagekit.io/lnj040m143/Imgs%20Portfolio/Vodafone_PoleSign.png"
+                alt="Proyecto Editorial"
+              />
+            </div>
+            <div class="project-info">
+              <h2 class="project-title">Vodafone (Re)Branding</h2>
+              <h3 class="project-subtitle">Visual Identity</h3>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-media parallax">
+              <img
+                src="https://ik.imagekit.io/lnj040m143/Imgs%20Portfolio/Vodafone_PoleSign.png"
+                alt="Proyecto Editorial"
+              />
+            </div>
+            <div class="project-info">
+              <h2 class="project-title">Vodafone (Re)Branding</h2>
+              <h3 class="project-subtitle">Visual Identity</h3>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-media parallax">
+              <img
+                src="https://ik.imagekit.io/lnj040m143/Imgs%20Portfolio/Vodafone_PoleSign.png"
+                alt="Proyecto Editorial"
+              />
+            </div>
+            <div class="project-info">
+              <h2 class="project-title">Vodafone (Re)Branding</h2>
+              <h3 class="project-subtitle">Visual Identity</h3>
+            </div>
+          </article>
+
+          <!-- Repite -->
+        </div>
+
+        <p>ALL WORKS</p>
       </section>
+
+      <!-- About Me Section -->
+      <h1>About me</h1>
+      <p>
+        I’m Andrea Marín, a Spanish student at UDIT from 2022, residing in
+        Madrid, Spain. Driven by a passion for learning, I pursue graphic design
+        as a self-taught individual. Alongside my university studies, I dedicate
+        time to personal projects and assisting friends and family with
+        theirdesign needs. Outside of my creative endeavors, I find joy in
+        exploring new destinations, immersing myself in diverse cultures, and
+        cherishing moments spent with loved ones.
+      </p>
+      <div class="about-me-focus">
+        <div>
+          <p>Focus</p>
+        </div>
+        <div>
+          <p>Brand experience</p>
+          <p>Packaging design</p>
+          <p>Branding</p>
+          <p>Motion graphics</p>
+          <p>Prototyping</p>
+        </div>
+      </div>
 
       <!-- Contact Section -->
       <section id="contact" class="py-5 py-lg-6 bg-dark">
