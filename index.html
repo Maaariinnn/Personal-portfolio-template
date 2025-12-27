@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grade 2 Demo: Bootstrap + GSAP Scroll</title>
+    <title>Portfolio Template</title>
 
     <!-- Bootstrap CSS -->
     <link
@@ -11,13 +11,22 @@
       rel="stylesheet"
     />
 
-    <!-- Fuentes Inter -->
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <!-- Fuentes Inter
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
-    />
+    /> -->
+
+    <!-- Enlace a las tipografías de Adobe Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/drv2ufr.css" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/base.css" />
@@ -72,11 +81,17 @@
         <!-- Parallax Background -->
         <div class="hero-bg position-absolute w-100 h-100"></div>
 
-        <!-- Floating shapes (GSAP animated) -->
-        <div class="floating-shapes">
-          <div class="shape shape-1"></div>
-          <div class="shape shape-2"></div>
-          <div class="shape shape-3"></div>
+        <div class="hero-bg">
+          <img
+            src="https://ik.imagekit.io/lnj040m143/Imgs%20Portfolio/Vodafone_PoleSign.png?updatedAt=1766778373458"
+            alt=""
+          />
+          <video
+            src="https://ik.imagekit.io/lnj040m143/Imgs%20Portfolio/Graphic%20Design%20Showreel%20(2022-2023).mp4"
+          ></video>
+          <!-- <video autoplay loop muted>
+            <source src="img/video_CCME.mp4" type="video/mp4" />
+          </video> -->
         </div>
 
         <div class="container-info-home">
@@ -92,143 +107,192 @@
         </div>
       </section>
 
-      <!-- Projects Section -->
+      <!-- /* --------------------------------------------------------------------------
+      WORKS SECTION
+      -------------------------------------------------------------------------- */ -->
       <section id="works">
-        <h1>Works</h1>
-<div class="container">
-  <div class="row g-4">
-    <!-- Proyecto 1 -->
-    <div class="col-12 col-md-6">
-      <div class="card project-card">
-        <img src="https://ik.imagekit.io/lnj040m143/Imgs%20Portfolio/Vodafone_PoleSign.png" class="card-img-top" alt="Proyecto 1">
-        <div >
-          <h5 class="card-title">Vodafone (Re)Branding</h5>
-          <p class="card-text">Visual Identity</p>
+        <h1>WORKS</h1>
+        <div class="projects">
+          <!-- Project 1 -->
+          <!-- ---------Contenedor de la imagen -->
+          <article class="project">
+            <div class="project-card">
+              <img
+                src="https://ik.imagekit.io/lnj040m143/Imgs%20Portfolio/Vodafone_PoleSign.png?updatedAt=1766778373458"
+                alt="Robinhood Crypto Wallets"
+                loading="lazy"
+              />
+            </div>
+            <!-- ---------Contenedor del titulo y categoría del proyecto -->
+            <div class="project-info">
+              <h2 class="project-title">Vodafone Rebranding</h2>
+              <div class="project-meta">
+                <span>Brand Identity</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <!-- ---------Contenedor de la imagen -->
+          <article class="project">
+            <div class="project-card">
+              <img
+                src="https://ik.imagekit.io/lnj040m143/Imgs%20Portfolio/hoodie%202.jpg"
+                alt="Inspirathon Hodie"
+                loading="lazy"
+              />
+            </div>
+            <!-- ---------Contenedor del titulo y categoría del proyecto -->
+            <div class="project-info">
+              <h2 class="project-title">UDIT Merchandising</h2>
+              <div class="project-meta">
+                <span>Visual Identity</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <!-- ---------Contenedor de la imagen -->
+          <article class="project">
+            <div class="project-card">
+              <img
+                src="https://ik.imagekit.io/lnj040m143/Imgs%20Portfolio/KAWS%20Window%20Sign.jpg"
+                alt="KAWS Exhibition"
+                loading="lazy"
+              />
+            </div>
+            <!-- ---------Contenedor del titulo y categoría del proyecto -->
+            <div class="project-info">
+              <h2 class="project-title">KAWS' Exhibition</h2>
+              <div class="project-meta">
+                <span>Visual Identity</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <!-- ---------Contenedor de la imagen -->
+          <article class="project">
+            <div class="project-card">
+              <img
+                src="https://ik.imagekit.io/lnj040m143/Imgs%20Portfolio/SUMATRA.jpg"
+                alt="Sumatra Coffee Packaging Starbucks"
+                loading="lazy"
+              />
+            </div>
+            <!-- ---------Contenedor del titulo y categoría del proyecto -->
+            <div class="project-info">
+              <h2 class="project-title">SUMATRA Coffee Starbucks</h2>
+              <div class="project-meta">
+                <span>Packaging</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <!-- ---------Contenedor de la imagen -->
+          <article class="project">
+            <div class="project-card">
+              <img
+                src="https://ik.imagekit.io/lnj040m143/Imgs%20Portfolio/LP_front%20labels%20bottles%20with%20box.jpg"
+                alt="La Penultima Wine Labels"
+                loading="lazy"
+              />
+            </div>
+            <!-- ---------Contenedor del titulo y categoría del proyecto -->
+            <div class="project-info">
+              <h2 class="project-title">La Penúltima</h2>
+              <div class="project-meta">
+                <span>Packaging</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6 -->
+          <!-- ---------Contenedor de la imagen -->
+          <article class="project">
+            <div class="project-card">
+              <img
+                src="https://ik.imagekit.io/lnj040m143/Imgs%20Portfolio/CARAVAN%20Expo.png"
+                alt="Robinhood Crypto Wallets"
+                loading="lazy"
+              />
+            </div>
+            <!-- ---------Contenedor del titulo y categoría del proyecto -->
+            <div class="project-info">
+              <h2 class="project-title">CARAVAN Redesign</h2>
+              <div class="project-meta">
+                <span>Packaging</span>
+              </div>
+            </div>
+          </article>
         </div>
-      </div>
-    </div>
 
-    <!-- Proyecto 2 -->
-    <div class="col-12 col-md-6">
-      <div class="card project-card">
-        <img src="project-2.webp" class="card-img-top" alt="Proyecto 2">
-        <div class="card-body">
-          <h5 class="card-title">Título del Proyecto</h5>
-          <p class="card-text">Subtítulo o descripción breve</p>
+        <div class="cta-AllWorks">
+          <p>ALL WORKS</p>
         </div>
-      </div>
-    </div>
-        <div class="projects-grid">
-          <article class="project">
-            <div class="col-sm-8 col-md-6 project-media parallax">
-              <img
-                src="https://ik.imagekit.io/lnj040m143/Imgs%20Portfolio/Vodafone_PoleSign.png"
-                alt="Proyecto Editorial"
-              />
-            </div>
-            <div class="project-info">
-              <h2 class="project-title">Vodafone (Re)Branding</h2>
-              <h3 class="project-subtitle">Visual Identity</h3>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-media parallax">
-              <img
-                src="https://ik.imagekit.io/lnj040m143/Imgs%20Portfolio/Vodafone_PoleSign.png"
-                alt="Proyecto Editorial"
-              />
-            </div>
-            <div class="project-info">
-              <h2 class="project-title">Vodafone (Re)Branding</h2>
-              <h3 class="project-subtitle">Visual Identity</h3>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-media parallax">
-              <img
-                src="https://ik.imagekit.io/lnj040m143/Imgs%20Portfolio/Vodafone_PoleSign.png"
-                alt="Proyecto Editorial"
-              />
-            </div>
-            <div class="project-info">
-              <h2 class="project-title">Vodafone (Re)Branding</h2>
-              <h3 class="project-subtitle">Visual Identity</h3>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-media parallax">
-              <img
-                src="https://ik.imagekit.io/lnj040m143/Imgs%20Portfolio/Vodafone_PoleSign.png"
-                alt="Proyecto Editorial"
-              />
-            </div>
-            <div class="project-info">
-              <h2 class="project-title">Vodafone (Re)Branding</h2>
-              <h3 class="project-subtitle">Visual Identity</h3>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-media parallax">
-              <img
-                src="https://ik.imagekit.io/lnj040m143/Imgs%20Portfolio/Vodafone_PoleSign.png"
-                alt="Proyecto Editorial"
-              />
-            </div>
-            <div class="project-info">
-              <h2 class="project-title">Vodafone (Re)Branding</h2>
-              <h3 class="project-subtitle">Visual Identity</h3>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-media parallax">
-              <img
-                src="https://ik.imagekit.io/lnj040m143/Imgs%20Portfolio/Vodafone_PoleSign.png"
-                alt="Proyecto Editorial"
-              />
-            </div>
-            <div class="project-info">
-              <h2 class="project-title">Vodafone (Re)Branding</h2>
-              <h3 class="project-subtitle">Visual Identity</h3>
-            </div>
-          </article>
-
-          <!-- Repite -->
-        </div>
-
-        <p>ALL WORKS</p>
       </section>
 
-      <!-- About Me Section -->
-      <h1>About me</h1>
-      <p>
-        I’m Andrea Marín, a Spanish student at UDIT from 2022, residing in
-        Madrid, Spain. Driven by a passion for learning, I pursue graphic design
-        as a self-taught individual. Alongside my university studies, I dedicate
-        time to personal projects and assisting friends and family with
-        theirdesign needs. Outside of my creative endeavors, I find joy in
-        exploring new destinations, immersing myself in diverse cultures, and
-        cherishing moments spent with loved ones.
-      </p>
-      <div class="about-me-focus">
-        <div>
-          <p>Focus</p>
+      <!-- /* --------------------------------------------------------------------------
+      ABOUT ME SECTION
+      -------------------------------------------------------------------------- */ -->
+      <section id="AboutMe">
+        <h1>ABOUT ME</h1>
+        <div class="description-about-me">
+          <p>
+            I’m Andrea Marín, a Spanish student at UDIT from 2022,residing in
+            Madrid, Spain. Driven by a passion for learning, I pursue graphic
+            design as a self-taught individual. Alongside my university studies,
+            I dedicate time to personal projects and assisting friends and
+            family with theirdesign needs. Outside of my creative endeavors, I
+            find joy in exploring new destinations, immersing myself in diverse
+            cultures, and cherishing moments spent with loved ones.
+          </p>
         </div>
-        <div>
-          <p>Brand experience</p>
-          <p>Packaging design</p>
-          <p>Branding</p>
-          <p>Motion graphics</p>
-          <p>Prototyping</p>
+        <div class="about-me-focus">
+          <div>
+            <p>Focus</p>
+            <div class="arrow-container">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+          <div>
+            <p>Brand experience</p>
+            <p>Packaging design</p>
+            <p>Branding</p>
+            <p>Motion graphics</p>
+            <p>Prototyping</p>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <!-- Contact Section -->
-      <section id="contact" class="py-5 py-lg-6 bg-dark">
+      <!-- /* --------------------------------------------------------------------------
+      CONTACT ME SECTION
+      -------------------------------------------------------------------------- */ -->
+      <section id="ContactMe">
+        <h1>GET IN TOUCH</h1>
+        <div class="about-me-focus">
+          <div>
+            <p>
+              hello@itsxiangfan.com
+              <br />
+              Permanently located in
+              <br />
+              Madrid, Spain
+            </p>
+          </div>
+          <div class="social-links">
+            <a href="https://maaariinnn.github.io/DISENO_WEB/sow/">Instagram</a>
+            <a href="https://maaariinnn.github.io/DISENO_WEB/sow/">Instagram</a>
+            <p>Instagram</p>
+            <p>Linkedin</p>
+            <p>Behance</p>
+            <p>Github</p>
+            <p>Pinterest</p>
+          </div>
+        </div>
+      </section>
+      <!-- <section id="contact" class="py-5 py-lg-6 bg-dark">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
@@ -290,16 +354,12 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
 
     <!-- Footer -->
-    <footer class="py-4 text-center text-muted small">
-      <div class="container">
-        <p class="mb-0">
-          &copy; 2025 John Designer. Built with Bootstrap 5 + GSAP.
-        </p>
-      </div>
+    <footer class="footer-marquee">
+      <p class="footer-text">@itsxiangfan</p>
     </footer>
 
     <!-- Bootstrap JS -->
