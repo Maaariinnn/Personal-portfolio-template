@@ -4,11 +4,16 @@
   --color-dark: #020202;
   --color-light: #ececec;
 
-  --font-body: "Inter", sans-serif;
-  --font-title: "Inter", sans-serif;
+  --font-body: "articulat-cf", sans-serif;
+  --font-title: "articulat-cf", sans-serif;
+
   --font-body: clamp(1rem, 1.1vw, 1.125rem);
-  --font-section: clamp(1.75rem, 4vw, 2.5rem);
+  --font-subtitle: clamp(1.25rem, 2.5vw, 4rem);
+  --font-section: clamp(1.75rem, 4vw, 6rem);
   --font-small: 0.875rem;
+
+  --font-regular: 400;
+  --font-bold: 700;
 
   --space-xs: clamp(0.75rem, 1vw, 0.2rem);
   --space-sm: clamp(1.5rem, 3vw, 2.5rem);
@@ -22,6 +27,11 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: "articulat-cf", sans-serif;
 }
 
 /* .inter-regular {
@@ -31,43 +41,73 @@
   font-style: normal;
 } */
 
+/* Esta es la fuente que estará por defecto */
+/* .articulat-normal {
+    font-family: "articulat-cf", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+} */
+
+.articulat-bold {
+  font-family: "articulat-cf", sans-serif;
+  font-weight: 700;
+  font-style: bold;
+}
+
 body {
-  font-family: "Inter", sans-serif;
-  font-weight: 400; /* Regular */
-  font-size: var(--font-body-size, 1rem);
+  font-family: "articulat-cf", sans-serif;
+
+  font-weight: var(--font-regular);
   line-height: 1.5;
   color: var(--color-dark);
   background-color: var(--color-secondary);
 }
 
 p {
-  font-family: "Inter", sans-serif;
+  font-family: "articulat-cf", sans-serif;
+  color: var(--color-light);
   font-weight: 400;
   font-size: clamp(1rem, 1.2vw, 1.125rem);
+  margin: 0;
 }
 
 /* --------------------------------------------------------------------------
    2. TÍTULOS
    -------------------------------------------------------------------------- */
 h1 {
-  font-family: var(--font-title);
-  font-weight: 700;
-  font-size: clamp(2rem, 4vw, 2rem);
+  font-family: "articulat-cf", sans-serif;
+
+  /* font-weight: var(--font-bold); */
+  font-size: var(--font-section);
   margin-bottom: 2rem;
+  color: var(--color-light);
+  padding-left: 3rem;
 }
 
 h2 {
-  font-family: var(--font-title);
-  font-weight: 600;
+  font-family: "articulat-cf", sans-serif;
+
+  font-weight: 400;
   font-size: clamp(1.5rem, 3vw, 1.5rem);
   margin: 0;
+  color: var(--color-light);
 }
 
 h3 {
-  font-family: var(--font-title);
+  font-family: "articulat-cf", sans-serif;
+
   font-weight: 400;
   font-size: clamp(1.25rem, 2.5vw, 1rem);
   margin: 0;
+  color: var(--color-light);
+}
+
+span {
+  font-family: "articulat-cf", sans-serif;
+
+  font-weight: 400;
+  color: var(--color-light);
+  opacity: 0.5;
 }
 
 /* --------------------------------------------------------------------------
@@ -79,3 +119,7 @@ h3 {
     transition: none !important;
   }
 }
+
+/* --------------------------------------------------------------------------
+   4. HERO
+   -------------------------------------------------------------------------- */

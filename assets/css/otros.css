@@ -61,20 +61,8 @@ body {
   left: 0;
 }
 
-/* --------------------------------------------------------------------------
-   4. Hero Section
-   -------------------------------------------------------------------------- */
-.hero {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-}
-
-.hero-bg {
-  background: inherit;
-  z-index: 0;
-}
-
 /* Floating shapes */
-.floating-shapes {
+/* .floating-shapes {
   position: absolute;
   inset: 0;
   overflow: hidden;
@@ -110,7 +98,7 @@ body {
   background: #14b8a6;
   bottom: 10%;
   left: 30%;
-}
+} */
 
 .hero-title {
   letter-spacing: -0.03em;
@@ -198,17 +186,10 @@ body {
 
 /*  */
 
-.project-card {
-  background: var(--color-bg-alt);
-  border-radius: 1rem;
-  overflow: hidden;
-  transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
-}
-
-.project-card:hover {
+/* .project-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-}
+} */
 
 .card-img-wrapper {
   aspect-ratio: 4/3;
