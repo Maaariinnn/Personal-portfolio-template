@@ -3,7 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Template</title>
+    <title>Portfolio Graphic Design by Xiangfan</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg" />
+    <link rel="apple-touch-icon" href="assets/images/logo.svg" />
+
+    <!-- Enlace a las tipografías de Adobe Fonts - ARTICULAT CF -->
+    <link rel="stylesheet" href="https://use.typekit.net/drv2ufr.css" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -11,24 +18,26 @@
       rel="stylesheet"
     />
 
-    <!-- Font Awesome -->
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Enlace de Font Awesome desde CDNJS (iconos) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
 
-    <!-- Fuentes Inter
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    <!-- Font Awesome -->
+    <!-- <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     /> -->
 
-    <!-- Enlace a las tipografías de Adobe Fonts -->
-    <link rel="stylesheet" href="https://use.typekit.net/drv2ufr.css" />
-
     <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/index.css" />
     <link rel="stylesheet" href="./assets/css/base.css" />
     <link rel="stylesheet" href="./assets/css/layout.css" />
     <link rel="stylesheet" href="./assets/css/otros.css" />
@@ -36,6 +45,7 @@
     <!-- Custom Scripts -->
     <script src="./assets/js/main.js" defer></script>
   </head>
+
   <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
     <!-- Navigation -->
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -394,7 +404,14 @@
           <div>
             <p>Focus</p>
             <div class="arrow-container">
-              <i class="fa-solid fa-arrow-right"></i>
+              <svg width="14" height="14" viewBox="0 0 14 14">
+                <path
+                  d="M10.8101 1.96222L0.726954 12.0453L1.66171 12.9801L11.7448 2.89698L11.9344 9.4447L13.208 9.07311L13.0134 2.35278C12.9877 1.46249 12.2434 0.718185 11.3531 0.692412L4.80762 0.502924L4.43487 1.77539L10.8101 1.96222Z"
+                  fill="white"
+                  stroke="white"
+                  stroke-width="0.542084"
+                ></path>
+              </svg>
             </div>
           </div>
           <div>
@@ -412,24 +429,18 @@
       -------------------------------------------------------------------------- */ -->
       <section id="ContactMe">
         <h1>GET IN TOUCH</h1>
-        <div class="about-me-focus">
+        <div class="contact-me-info">
           <div>
-            <p>
-              hello@itsxiangfan.com
-              <br />
-              Permanently located in
-              <br />
-              Madrid, Spain
-            </p>
+            <p>hello@itsxiangfan.com</p>
+            <p>Permanently located in</p>
+            <p>Madrid, Spain</p>
           </div>
           <div class="social-links">
             <a href="https://maaariinnn.github.io/DISENO_WEB/sow/">Instagram</a>
-            <a href="https://maaariinnn.github.io/DISENO_WEB/sow/">Instagram</a>
-            <p>Instagram</p>
-            <p>Linkedin</p>
-            <p>Behance</p>
-            <p>Github</p>
-            <p>Pinterest</p>
+            <a href="https://maaariinnn.github.io/DISENO_WEB/sow/">Linkedin</a>
+            <a href="https://maaariinnn.github.io/DISENO_WEB/sow/">Behance</a>
+            <a href="https://maaariinnn.github.io/DISENO_WEB/sow/">Github</a>
+            <a href="https://maaariinnn.github.io/DISENO_WEB/sow/">Pinterest</a>
           </div>
         </div>
       </section>
@@ -501,6 +512,9 @@
     <!-- Footer -->
     <footer class="footer-marquee">
       <p class="footer-text">@itsxiangfan</p>
+      <div class="last-text">
+        <p>© All rights reserved 2025</p>
+      </div>
     </footer>
 
     <!-- Bootstrap JS -->

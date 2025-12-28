@@ -66,7 +66,7 @@ HERO SECTION
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   object-fit: cover;
 }
 
@@ -151,6 +151,7 @@ WORKS SECTION
   color: white;
   text-align: center;
   padding: 60px;
+  scale: 0.75;
 }
 
 .cta-AllWorks p {
@@ -174,12 +175,11 @@ ABOUT ME SECTION
 }
 
 .description-about-me p {
-  font-size: var(--font-subtitle);
-  line-height: 1.6;
+  font-size: var(--font-small);
+  /* line-height: 1.6; */
   width: 85vw;
   color: var(--color-light);
   font-weight: var(--font-regular);
-  opacity: 0.6;
 }
 
 /* ABOUT ME FOCUS */
@@ -202,7 +202,7 @@ ABOUT ME SECTION
 }
 
 .about-me-focus div:first-child p {
-  font-size: var(--font-subtitle);
+  font-size: var(--font-small);
   color: var(--color-light);
 }
 
@@ -224,16 +224,18 @@ ABOUT ME SECTION
   font-size: var(--font-subtitle);
 } */
 
-.arrow-container {
+.about-me-focus .arrow-container {
   overflow: visible;
   margin: auto 0;
   display: inline-block;
   transition: transform 0.5s ease;
+  margin-bottom: 22px;
+  transform: rotate(90deg);
 }
 
-.arrow-container i {
+.arrow-container svg {
   color: var(--color-light);
-  font-size: 3rem;
+  scale: 1.5;
 }
 
 /* 
@@ -246,17 +248,44 @@ CONTACT ME SECTION
   background-color: var(--color-dark);
 }
 
-.social-links {
+.contact-me-info {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin-inline: auto;
+  padding: var(--space-sm);
+}
+
+.contact-me-info div:first-child {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  grid-column: span 6;
+  column-gap: 16px;
+}
+
+.contact-me-info div:first-child p {
+  font-size: var(--font-small);
+}
+
+.contact-me-info div:first-child p:first-child {
+  font-weight: 700;
+}
+
+.contact-me-info div:first-child p:nth-child(2),
+.contact-me-info div:first-child p:last-child {
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+.contact-me-info .social-links {
+  display: flex;
+  flex-direction: column;
+  grid-column: span 6;
 }
 
 .social-links a {
-  font-size: var(--font-subtitle);
+  font-size: var(--font-small);
   color: var(--color-light);
   font-weight: var(--font-bold);
-  opacity: 0.6;
   text-decoration: none;
 }
 
@@ -290,7 +319,31 @@ FOOTER SECTION
   text-align: justify;
 }
 
+.last-text {
+  padding-left: 3rem;
+  margin: 0;
+}
+
 @media screen and (max-width: 834px) {
+  /* SECTION HERO */
+  .container-info-home p:last-child {
+    margin-left: 0.5rem;
+    font-size: 64px;
+    font-weight: 400;
+  }
+
+  h1 {
+    padding-left: 2rem;
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: clamp(1.25rem, 3vw, 1.125rem);
+  }
+
+  #works {
+    padding-top: 4rem;
+  }
   .projects {
     grid-template-columns: 1fr;
     padding-inline: 16px;
@@ -299,22 +352,46 @@ FOOTER SECTION
 
   .project-card {
     /* aspect-ratio: 3 / 3; */
-    height: 25vh;
+    height: 35vh;
+  }
+
+  .row {
+    margin-top: 0;
   }
   .col-md-8 {
     flex: 0 0 auto;
     width: 100%;
+    margin-bottom: 2rem;
   }
 
   .col-6 {
     flex: 0 0 auto;
     width: 50%;
     flex-grow: 1;
+    margin-bottom: 2rem;
     /* aspect-ratio: 4 / 3; */
+  }
+
+  .description-about-me {
+    padding-left: 2rem;
   }
 }
 
 @media screen and (max-width: 390px) {
+  .container-info-home p:last-child {
+    margin-left: 0.5rem;
+    font-size: 48px;
+    font-weight: 400;
+  }
+  h1 {
+    padding-left: 1rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .container-projects {
+    padding-inline: 1rem;
+  }
+
   .projects {
     grid-template-columns: 1fr;
     padding-inline: 16px;
@@ -324,14 +401,51 @@ FOOTER SECTION
 
   .project-card {
     /* aspect-ratio: 3 / 3; */
-    height: 10vh;
+    height: 40vh;
+  }
+
+  .col-md-8 {
+    flex: 0 0 auto;
+    width: 100%;
+    margin-bottom: 1rem;
   }
 
   .col-6 {
     flex: 0 0 auto;
     width: 100%;
     flex-grow: 1;
+    margin-bottom: 1rem;
     /* aspect-ratio: 4 / 3; */
+  }
+
+  .description-about-me {
+    padding-left: 1rem;
+    padding-bottom: var(--space-sm);
+  }
+
+  .about-me-focus {
+    padding: var(--space-sm) 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-me-focus .arrow-container {
+    margin-bottom: 8px;
+  }
+
+  #ContactMe {
+    padding-top: 2rem;
+  }
+
+  .contact-me-info {
+    padding: var(--space-sm) 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .last-text {
+    padding-left: 1rem;
   }
 }
 
