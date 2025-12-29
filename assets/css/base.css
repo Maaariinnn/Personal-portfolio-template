@@ -59,8 +59,8 @@ body {
 
   font-weight: var(--font-regular);
   line-height: 1.5;
-  color: var(--color-dark);
-  background-color: var(--color-secondary);
+  /* color: var(--color-dark); */
+  background-color: var(--color-dark) !important;
 }
 
 p {
@@ -69,6 +69,12 @@ p {
   font-weight: 400;
   font-size: clamp(1rem, 1.2vw, 1.125rem);
   margin: 0;
+}
+
+section {
+  background-color: var(--color-dark); /* ya lo tienes */
+  overflow: hidden; /* evita que se vea el “fondo blanco” al animar hijos */
+  position: relative;
 }
 
 /* --------------------------------------------------------------------------

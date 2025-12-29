@@ -311,6 +311,22 @@ function initHeroAnimations() {
 
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.utils.toArray("section:not(.hero)").forEach((section) => {
+  if (prefersReducedMotion) return;
+
+  gsap.from(section, {
+    y: 50,
+    opacity: 0,
+    duration: 0.8,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: section,
+      start: "top 85%",
+      toggleActions: "play none none none",
+      markers: false,
+    },
+  });
+});
 // Animacion de ScrollTrigger para las tarjetas de proyecto
 gsap.utils.toArray(".project.reveal").forEach((card) => {
   gsap.fromTo(
@@ -344,6 +360,67 @@ gsap.from(".focus-words p", {
     toggleActions: "play none none none",
     once: true,
   },
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (!prefersReducedMotion) {
+    gsap.from("footer", {
+      y: 50, // empieza 50px más abajo
+      opacity: 0, // empieza invisible
+      duration: 0.8,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: "footer", // elemento que activa la animación
+        start: "top 90%", // cuando la parte superior del footer llega al 90% del viewport
+        toggleActions: "play none none none", // se reproduce solo una vez
+      },
+    });
+  }
+
+  // Animación de cada link dentro de social-links
+  const socialLinks = document.querySelectorAll(".social-links li a");
+
+  // gsap.from(socialLinks, {
+  //   y: 20,
+  //   opacity: 0,
+  //   stagger: 0.15, // cada link aparece con retraso
+  //   duration: 2.5,
+  //   ease: "power2.out",
+  //   scrollTrigger: {
+  //     trigger: ".social-links",
+  //     start: "top 85%",
+  //     toggleActions: "play none none none",
+  //   },
+  // });
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (!prefersReducedMotion) {
+    gsap.from(".social-links li", {
+      x: -50, // empieza 50px a la izquierda
+      opacity: 0, // empieza invisible
+      duration: 0.8, // duración de cada animación
+      ease: "power2.out",
+      stagger: 0.4, // entra uno tras otro
+      scrollTrigger: {
+        trigger: ".social-links",
+        start: "top 85%",
+        toggleActions: "play none none none",
+      },
+    });
+  }
 });
 
 // ==========================================================================

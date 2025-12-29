@@ -66,8 +66,12 @@ HERO SECTION
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   object-fit: cover;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
 }
 
 .hero-bg img {
@@ -160,6 +164,7 @@ WORKS SECTION
   justify-content: center;
   padding-top: 2rem;
 }
+
 .cta-AllWorks {
   display: flex;
   flex-direction: row;
@@ -172,11 +177,14 @@ WORKS SECTION
   /* padding: 60px; */
   scale: 0.75;
   position: relative;
+  transition: transform 0.5s ease, font-variation-settings 0.25s ease;
 }
 
 .cta-AllWorks:hover {
   cursor: pointer;
   color: #0d6efd;
+  transform: scale(1.01);
+  transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
 }
 
 .cta-AllWorks:after {
@@ -199,12 +207,20 @@ WORKS SECTION
   font-size: var(--font-section);
 }
 
+.cta-AllWorks p:hover {
+  font-weight: 700;
+}
+
 .cta-AllWorks .arrow-container {
   overflow: visible;
   margin: auto 0;
   scale: 2;
   transform: rotate(45deg);
 }
+
+/* .cta-AllWorks:hover .arrow-container {
+  transform: rotate(-12.5deg);
+} */
 
 /* 
 --------------------------------------------------------------------------

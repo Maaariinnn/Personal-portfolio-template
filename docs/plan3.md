@@ -1,4 +1,4 @@
-# Plan 2 — Efecto Scroll Reveal de Texto en "About Me"
+# Plan 2 — Solución hover en social links"
 
 ## Resumen del plan - Prompt
 
