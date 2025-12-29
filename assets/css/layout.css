@@ -16,6 +16,23 @@
   padding-right: 10rem !important;
   opacity: 0.2;
   color: var(--color-light);
+  pointer-events: none;
+}
+
+/* BURGER MENU A CRUZ */
+.custom-toggler {
+  width: 54px;
+  /* height: 24px; */
+  scale: 1.2;
+  position: relative;
+  border: none;
+  background: none;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.fs-2 {
+  font-size: calc(1.55rem + 0.9vw) !important;
 }
 
 /* .work-header {
@@ -71,7 +88,7 @@ HERO SECTION
   z-index: 0;
 }
 
-.hero-bg img {
+.hero-bg video {
   width: 100%;
   height: 100%;
   object-fit: cover; /* cubre el contenedor sin deformarse */
@@ -494,7 +511,8 @@ FOOTER SECTION
 }
 
 .footer-text {
-  font-size: 17vw;
+  display: block;
+  font-size: clamp(6rem, 17vw, 18rem);
   font-weight: 600;
   line-height: 0.9;
   margin: 0;
@@ -516,6 +534,9 @@ FOOTER SECTION
     font-size: 3.5rem;
   }
 
+  .mouse {
+    display: none;
+  }
   h1 {
     padding-left: 2rem;
     font-size: 48px;
@@ -591,6 +612,22 @@ FOOTER SECTION
 }
 
 @media screen and (max-width: 430px) {
+  /* BURGER MENU A CRUZ */
+  .custom-toggler {
+    width: 38px;
+    /* height: 24px; */
+    scale: 1.2;
+    position: relative;
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 9999;
+  }
+
+  .fs-2 {
+    font-size: calc(1.5rem + 0.9vw) !important;
+  }
+
   .hero {
     height: calc(var(--vh, 1vh) * 100);
   }

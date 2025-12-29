@@ -611,6 +611,13 @@ function initNavbarScroll() {
 // 7. Smooth Scroll for Anchor Links
 // ==========================================================================
 
+const togglerIcon = document.querySelector(".navbar-toggler i");
+
+document.querySelector(".navbar-toggler").addEventListener("click", () => {
+  togglerIcon.classList.toggle("bi-list");
+  togglerIcon.classList.toggle("bi-x");
+});
+
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", (e) => {
