@@ -2,9 +2,9 @@
 
 ## Trends
 
-- [Trend 1]
-- [Trend 2]
-- [Trend 3]
+- Oversized Typography
+- Editorial Grid
+- Minimal Brutalism
 
 ## Visual References
 

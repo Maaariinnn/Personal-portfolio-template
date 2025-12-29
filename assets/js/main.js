@@ -274,40 +274,113 @@ function initHeroAnimations() {
  * For reveals, we use .from() because we want elements to animate
  * FROM invisible/offset TO their natural CSS state.
  */
-function initScrollReveals() {
-  if (prefersReducedMotion) return;
+// function initScrollReveals() {
+//   if (prefersReducedMotion) return;
 
-  // Convert selector to array and loop through each element
-  gsap.utils.toArray(".gsap-reveal").forEach((el) => {
-    gsap.from(el, {
-      y: 50, // Start 50px below
-      opacity: 0, // Start invisible
-      duration: 0.8,
+//   // Convert selector to array and loop through each element
+//   gsap.utils.toArray(".gsap-reveal").forEach((el) => {
+//     gsap.from(el, {
+//       y: 50, // Start 50px below
+//       opacity: 0, // Start invisible
+//       duration: 0.8,
+//       ease: "power2.out",
+//       scrollTrigger: {
+//         trigger: el, // This element triggers its own animation
+//         start: "top 85%", // When element's top hits 85% of viewport
+
+//         /**
+//          * toggleActions: 'play none none none'
+//          *
+//          * 📐 FORMAT: 'onEnter onLeave onEnterBack onLeaveBack'
+//          *
+//          * Options for each: play, pause, resume, reset, restart, complete, reverse, none
+//          *
+//          * 'play none none none' means:
+//          * - onEnter: play the animation
+//          * - onLeave: do nothing (animation stays at end)
+//          * - onEnterBack: do nothing (don't replay when scrolling back up)
+//          * - onLeaveBack: do nothing
+//          *
+//          * This creates a "one-time reveal" effect.
+//          */
+//         toggleActions: "play none none none",
+//       },
+//     });
+//   });
+// }
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray(".project.reveal").forEach((card) => {
+  gsap.fromTo(
+    card,
+    { y: 40, opacity: 0 },
+    {
+      y: 0,
+      opacity: 1,
+      duration: 0.9,
       ease: "power2.out",
       scrollTrigger: {
-        trigger: el, // This element triggers its own animation
-        start: "top 85%", // When element's top hits 85% of viewport
-
-        /**
-         * toggleActions: 'play none none none'
-         *
-         * 📐 FORMAT: 'onEnter onLeave onEnterBack onLeaveBack'
-         *
-         * Options for each: play, pause, resume, reset, restart, complete, reverse, none
-         *
-         * 'play none none none' means:
-         * - onEnter: play the animation
-         * - onLeave: do nothing (animation stays at end)
-         * - onEnterBack: do nothing (don't replay when scrolling back up)
-         * - onLeaveBack: do nothing
-         *
-         * This creates a "one-time reveal" effect.
-         */
-        toggleActions: "play none none none",
+        trigger: card,
+        start: "top 90%", // empieza cuando la card entra en el viewport
+        toggleActions: "play none none none", // solo se reproduce al entrar
+        markers: false, // poner true para debug
       },
-    });
-  });
-}
+    }
+  );
+});
+
+// window.addEventListener("load", () => {
+//   const focusParagraphs = document.querySelectorAll(
+//     ".about-me-focus div:nth-child(2) p"
+//   );
+
+//   gsap.from(focusParagraphs, {
+//     y: 20,
+//     opacity: 0,
+//     duration: 0.6,
+//     ease: "power2.out",
+//     stagger: 0.2, // cada p aparece tras la anterior
+//     scrollTrigger: {
+//       trigger: ".about-me-focus",
+//       start: "top 80%",
+//       toggleActions: "play none none none",
+//       once: true,
+//       markers: false, // poner true para debug
+//     },
+//   });
+// });
+gsap.from(".focus-words p", {
+  y: 20,
+  opacity: 0,
+  duration: 0.6,
+  ease: "power2.out",
+  stagger: 0.2, // cada p aparece tras la anterior
+  scrollTrigger: {
+    trigger: ".focus-words",
+    start: "top 80%",
+    toggleActions: "play none none none",
+    once: true,
+  },
+});
+
+// const cards = gsap.utils.toArray(".container-projects .project.reveal");
+
+// gsap
+//   .timeline({
+//     scrollTrigger: {
+//       trigger: ".container-projects",
+//       start: "top 80%",
+//       once: true,
+//     },
+//   })
+//   .from(cards, {
+//     y: 40,
+//     opacity: 0,
+//     duration: 0.8,
+//     ease: "power2.out",
+//     stagger: 0.2,
+//   });
 
 // ==========================================================================
 // 4. SKILL BARS ANIMATION
@@ -522,3 +595,86 @@ window.cleanupAnimations = () => {
   ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
   gsap.killTweensOf("*");
 };
+
+// ScrollTrigger palabra por palabra en About Me
+function splitTextIntoWords(element) {
+  const text = element.textContent;
+  const words = text.split(" ");
+  element.innerHTML = words
+    .map((word) => `<span class="word">${word}&nbsp;</span>`)
+    .join("");
+}
+
+const aboutText = document.querySelector(".description-about-me p");
+
+splitTextIntoWords(aboutText);
+
+// 1.Accesibilidad
+// const prefersReducedMotion = window.matchMedia(
+//   "(prefers-reduced-motion: reduce)"
+// ).matches;
+
+// 2.Animacion principal
+if (!prefersReducedMotion) {
+  const words = document.querySelectorAll(".description-about-me .word");
+
+  gsap.to(words, {
+    color: "#ffffff",
+    ease: "none",
+    stagger: {
+      each: 0.05,
+    },
+    scrollTrigger: {
+      trigger: ".description-about-me",
+      start: "top 70%",
+      end: "bottom 40%",
+      scrub: true,
+    },
+  });
+} else {
+  // Si reduce motion → texto normal
+  document.querySelectorAll(".description-about-me .word").forEach((word) => {
+    word.style.color = "#ffffff";
+  });
+}
+
+// split de texto SIN romper la maquetación.
+// Esto mantiene exactamente el mismo flujo que el texto original.
+
+function splitTextIntoWords(element) {
+  const text = element.textContent;
+  element.textContent = "";
+
+  text.split(/(\s+)/).forEach((token) => {
+    if (token.trim() === "") {
+      element.appendChild(document.createTextNode(token));
+    } else {
+      const span = document.createElement("span");
+      span.className = "word";
+      span.textContent = token;
+      element.appendChild(span);
+    }
+  });
+}
+
+if (!prefersReducedMotion) {
+  const words = document.querySelectorAll(".description-about-me .word");
+
+  gsap.to(words, {
+    color: "#ffffff",
+    ease: "none",
+    stagger: {
+      each: 0.15,
+    },
+    scrollTrigger: {
+      trigger: ".description-about-me",
+      start: "top 70%",
+      end: "bottom 40%",
+      scrub: true,
+    },
+  });
+} else {
+  document.querySelectorAll(".description-about-me .word").forEach((word) => {
+    word.style.color = "#ffffff";
+  });
+}
