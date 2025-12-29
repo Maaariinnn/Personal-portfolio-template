@@ -94,6 +94,7 @@ HERO SECTION
   object-fit: cover; /* cubre el contenedor sin deformarse */
   object-position: center; /* centrado perfecto */
   pointer-events: none; /* no interferir con interacciones */
+  z-index: -3;
 }
 
 /* Texto principal */
