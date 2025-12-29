@@ -257,8 +257,6 @@ body {
   max-width: 50%;
 }
 
-/* Texto para la primera card  */
-
 .col-md-4 .project-overlay p {
   max-width: 80%;
 }
@@ -378,6 +376,10 @@ body {
   .shape {
     transform: scale(0.6);
   }
+
+  .col-md-8 .project-overlay p {
+    max-width: 80;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -397,6 +399,10 @@ body {
 
   .about-image::before {
     display: none;
+  }
+
+  .col-md-8 .project-overlay p {
+    max-width: 80%;
   }
 }
 

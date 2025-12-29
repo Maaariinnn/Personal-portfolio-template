@@ -48,7 +48,7 @@
 
   <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
     <!-- Navigation -->
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top">
       <div class="container">
         <a class="navbar-brand fw-bold" href="#">
           <img
@@ -70,7 +70,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
+            <li class="nav-item full-name">
               <a>Andrea Xiangfan</a>
             </li>
             <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
@@ -78,10 +78,10 @@
               <a class="nav-link" href="#works">Works</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#projects">About Me</a>
+              <a class="nav-link" href="#AboutMe">About Me</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+              <a class="nav-link" href="#ContactMe">Contact</a>
             </li>
           </ul>
         </div>
@@ -339,8 +339,20 @@
           </div>
         </div>
 
-        <div class="cta-AllWorks">
-          <p>ALL WORKS</p>
+        <div class="container-cta">
+          <div class="cta-AllWorks">
+            <p>ALL WORKS</p>
+            <div class="arrow-container">
+              <svg width="14" height="14" viewBox="0 0 14 14">
+                <path
+                  d="M10.8101 1.96222L0.726954 12.0453L1.66171 12.9801L11.7448 2.89698L11.9344 9.4447L13.208 9.07311L13.0134 2.35278C12.9877 1.46249 12.2434 0.718185 11.3531 0.692412L4.80762 0.502924L4.43487 1.77539L10.8101 1.96222Z"
+                  fill="white"
+                  stroke="white"
+                  stroke-width="0.542084"
+                ></path>
+              </svg>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -360,8 +372,54 @@
             cultures, and cherishing moments spent with loved ones.
           </p>
         </div>
+        <!-- Skills with animated progress -->
+        <div class="skills">
+          <div class="about-me-sub">
+            <p>Hard Skills</p>
+            <div class="arrow-container">
+              <svg width="14" height="14" viewBox="0 0 14 14">
+                <path
+                  d="M10.8101 1.96222L0.726954 12.0453L1.66171 12.9801L11.7448 2.89698L11.9344 9.4447L13.208 9.07311L13.0134 2.35278C12.9877 1.46249 12.2434 0.718185 11.3531 0.692412L4.80762 0.502924L4.43487 1.77539L10.8101 1.96222Z"
+                  fill="white"
+                  stroke="white"
+                  stroke-width="0.542084"
+                ></path>
+              </svg>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <div class="skill-item gsap-reveal mb-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">Figma</span>
+                <span class="text-muted">95%</span>
+              </div>
+              <div class="progress" style="height: 24px">
+                <div class="progress-bar skill-bar" data-width="95"></div>
+              </div>
+            </div>
+            <div class="skill-item gsap-reveal mb-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">Adobe Creative Cloud</span>
+                <span class="text-muted">80%</span>
+              </div>
+              <div class="progress" style="height: 24px">
+                <div class="progress-bar skill-bar" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-item gsap-reveal mb-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">Cinema 4D</span>
+                <span class="text-muted">70%</span>
+              </div>
+              <div class="progress" style="height: 24px">
+                <div class="progress-bar skill-bar" data-width="85"></div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="about-me-focus">
-          <div>
+          <div class="about-me-sub">
             <p>Focus</p>
             <div class="arrow-container">
               <svg width="14" height="14" viewBox="0 0 14 14">
@@ -374,7 +432,7 @@
               </svg>
             </div>
           </div>
-          <div class="focus-words">
+          <div class="focus-words gsap-reveal">
             <p>Brand experience</p>
             <p>Packaging design</p>
             <p>Branding</p>
@@ -396,11 +454,27 @@
             <p>Madrid, Spain</p>
           </div>
           <div class="social-links">
-            <a href="https://maaariinnn.github.io/DISENO_WEB/sow/">Instagram</a>
-            <a href="https://maaariinnn.github.io/DISENO_WEB/sow/">Linkedin</a>
-            <a href="https://maaariinnn.github.io/DISENO_WEB/sow/">Behance</a>
-            <a href="https://maaariinnn.github.io/DISENO_WEB/sow/">Github</a>
-            <a href="https://maaariinnn.github.io/DISENO_WEB/sow/">Pinterest</a>
+            <li>
+              <a href="https://maaariinnn.github.io/DISENO_WEB/sow/"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a href="https://maaariinnn.github.io/DISENO_WEB/sow/"
+                >Linkedin</a
+              >
+            </li>
+            <li>
+              <a href="https://maaariinnn.github.io/DISENO_WEB/sow/">Behance</a>
+            </li>
+            <li>
+              <a href="https://maaariinnn.github.io/DISENO_WEB/sow/">Github</a>
+            </li>
+            <li>
+              <a href="https://maaariinnn.github.io/DISENO_WEB/sow/"
+                >Pinterest</a
+              >
+            </li>
           </div>
         </div>
       </section>
@@ -471,7 +545,14 @@
 
     <!-- Footer -->
     <footer class="footer-marquee">
-      <p class="footer-text">@itsxiangfan</p>
+      <a
+        class="footer-text"
+        href="mailto:andreaxiangfan@gmail.com"
+        class="btn btn-contact footer-btn gsap-reveal"
+        aria-label="Send an email to Carla Kaubisch"
+      >
+        @itsxiangfan</a
+      >
       <div class="last-text">
         <p>© All rights reserved 2025</p>
       </div>

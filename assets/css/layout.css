@@ -136,6 +136,8 @@ WORKS SECTION
   border-radius: 1rem;
   transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
   height: 60vh;
+  min-height: 30vh;
+  min-height: 40vh;
   aspect-ratio: 3 / 2;
   width: 100%;
   overflow: hidden;
@@ -153,15 +155,55 @@ WORKS SECTION
   gap: var(--space-xs);
 }
 
+.container-cta {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
 .cta-AllWorks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
   color: white;
+  width: fit-content;
   text-align: center;
-  padding: 60px;
+  /* padding: 60px; */
   scale: 0.75;
+  position: relative;
+}
+
+.cta-AllWorks:hover {
+  cursor: pointer;
+  color: #0d6efd;
+}
+
+.cta-AllWorks:after {
+  content: "";
+  position: absolute;
+  background-color: #0d6efd;
+  height: 3px;
+  width: 0%;
+  left: 0;
+  bottom: -3px;
+  transition: 0.5s;
+}
+
+.cta-AllWorks:hover:after {
+  /* width: 100%; */
+  width: calc(100% + 24px);
 }
 
 .cta-AllWorks p {
   font-size: var(--font-section);
+}
+
+.cta-AllWorks .arrow-container {
+  overflow: visible;
+  margin: auto 0;
+  scale: 2;
+  transform: rotate(45deg);
 }
 
 /* 
@@ -200,6 +242,43 @@ ABOUT ME SECTION
   font-weight: var(--font-regular);
 }
 
+/* SKILLS  */
+.skills {
+  padding: 2rem var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  max-width: 90vw;
+  /* margin-top: var(--space-md); */
+}
+
+.mt-4 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.fw-semibold {
+  opacity: 1;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+}
+
+.text-muted {
+  opacity: 0.6;
+  color: var(--color-light) !important;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skill-bar {
+  height: 100%;
+  width: 0;
+  transition: width 1.5s ease-out;
+}
+
 /* ABOUT ME FOCUS */
 .about-me-focus {
   /* display: flex; */
@@ -211,15 +290,24 @@ ABOUT ME SECTION
   column-gap: 16px;
 }
 
-.about-me-focus div:first-child {
+/* .about-me-focus div:first-child {
   grid-column: span 6;
   height: fit-content;
   display: flex;
   flex-direction: row;
   gap: 1rem;
+} */
+
+.about-me-sub {
+  grid-column: span 6;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center !important;
 }
 
-.about-me-focus div:first-child p {
+.about-me-sub p {
   /* font-size: var(--font-small); */
   font-size: clamp(1.75rem, 4vw, 2.5rem);
 
@@ -245,12 +333,12 @@ ABOUT ME SECTION
   will-change: transform, opacity;
 }
 
-.about-me-focus .arrow-container {
+.about-me-sub .arrow-container {
   overflow: visible;
   margin: auto 0;
   display: inline-block;
   transition: transform 0.5s ease;
-  margin-bottom: 22px;
+  /* margin-bottom: 22px; */
   transform: rotate(90deg);
 }
 
@@ -298,19 +386,45 @@ CONTACT ME SECTION
   opacity: 0.6;
 }
 
-.contact-me-info .social-links {
+.social-links {
   display: flex;
   flex-direction: column;
   grid-column: span 6;
+  list-style: none;
 }
 
-.social-links a {
-  /* font-size: var(--font-small); */
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-
-  color: var(--color-light);
-  font-weight: var(--font-bold);
+.social-links li a {
   text-decoration: none;
+  color: white !important;
+  position: relative;
+  width: fit-content;
+  line-height: 1.6;
+
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: var(--font-bold);
+  color: var(--color-light) !important;
+  text-decoration: none;
+
+  position: relative;
+}
+
+.social-links li a:hover {
+  color: white !important;
+}
+
+.social-links li a:after {
+  content: "";
+  position: absolute;
+  background-color: #0d6efd;
+  height: 3px;
+  width: 0%;
+  left: 0;
+  bottom: -3px;
+  transition: 0.5s;
+}
+
+.social-links li a:hover:after {
+  width: 100%;
 }
 
 .email {
@@ -338,13 +452,15 @@ FOOTER SECTION
   font-weight: 600;
   line-height: 0.9;
   margin: 0;
+  color: var(--color-light) !important;
+  text-decoration: none;
 
   white-space: nowrap;
   text-align: justify;
 }
 
 .last-text {
-  padding-left: 3rem;
+  padding-left: 2rem;
   margin: 0;
 }
 
@@ -361,6 +477,10 @@ FOOTER SECTION
 
   h2 {
     font-size: clamp(1.25rem, 3vw, 1.125rem);
+  }
+
+  .navbar-nav li:first-child {
+    display: none !important;
   }
 
   #works {
@@ -394,22 +514,42 @@ FOOTER SECTION
     /* aspect-ratio: 4 / 3; */
   }
 
-  .description-about-me {
-    padding-left: 2rem;
+  .cta-AllWorks {
+    gap: 2rem;
+  }
+  .cta-AllWorks .arrow-container {
+    scale: 1.5;
   }
 
-  .about-me-focus .arrow-container {
-    margin-bottom: 14px;
+  /* --------------
+  ABOUT ME SECTION 
+  --------------- */
+
+  .description-about-me {
+    padding: 0 2rem;
+  }
+
+  .description-about-me p {
+    width: 100%;
+  }
+
+  /* SKILLS  */
+  .skills {
+    padding: 2rem 1rem;
+    max-width: 100%;
   }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 430px) {
   .container-info-home p:last-child {
     margin-left: 0.5rem;
     font-size: 3rem;
     font-weight: 400;
   }
 
+  .mouse {
+    display: none;
+  }
   h1 {
     padding-left: 1rem;
     font-size: 2rem;
@@ -445,27 +585,44 @@ FOOTER SECTION
     /* aspect-ratio: 4 / 3; */
   }
 
+  .container-cta {
+    padding-top: 1rem;
+  }
+
+  /* --------------
+  ABOUT ME SECTION 
+  --------------- */
+
+  #AboutMe {
+    padding-top: 4rem;
+  }
+
+  .skills {
+    padding: 1rem;
+  }
+
+  .mt-4 {
+    gap: 0.5rem;
+    margin-top: 1rem !important;
+  }
+
   .description-about-me {
     padding-left: 1rem;
     padding-bottom: var(--space-sm);
   }
 
   .about-me-focus {
-    padding: var(--space-sm) 1rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
   }
 
-  .about-me-focus .arrow-container {
-    margin-bottom: 8px;
-  }
-
   #ContactMe {
-    padding-top: 2rem;
+    padding-top: 5rem;
   }
 
   .contact-me-info {
-    padding: var(--space-sm) 1rem;
+    padding: 0 1rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -473,6 +630,18 @@ FOOTER SECTION
 
   .last-text {
     padding-left: 1rem;
+  }
+
+  .contact-me-info div:first-child p {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+  }
+
+  .social-links {
+    padding-bottom: 2rem;
+  }
+  .social-links li a {
+    font-size: clamp(2.5rem, 4vw, 3rem);
+    line-height: 1.2;
   }
 }
 

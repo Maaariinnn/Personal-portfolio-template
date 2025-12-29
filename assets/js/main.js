@@ -311,6 +311,7 @@ function initHeroAnimations() {
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Animacion de ScrollTrigger para las tarjetas de proyecto
 gsap.utils.toArray(".project.reveal").forEach((card) => {
   gsap.fromTo(
     card,
@@ -330,32 +331,13 @@ gsap.utils.toArray(".project.reveal").forEach((card) => {
   );
 });
 
-// window.addEventListener("load", () => {
-//   const focusParagraphs = document.querySelectorAll(
-//     ".about-me-focus div:nth-child(2) p"
-//   );
-
-//   gsap.from(focusParagraphs, {
-//     y: 20,
-//     opacity: 0,
-//     duration: 0.6,
-//     ease: "power2.out",
-//     stagger: 0.2, // cada p aparece tras la anterior
-//     scrollTrigger: {
-//       trigger: ".about-me-focus",
-//       start: "top 80%",
-//       toggleActions: "play none none none",
-//       once: true,
-//       markers: false, // poner true para debug
-//     },
-//   });
-// });
+// Animacion de ScrollTrigger palabra por palabra en Focus Words
 gsap.from(".focus-words p", {
   y: 20,
   opacity: 0,
-  duration: 0.6,
+  duration: 2,
   ease: "power2.out",
-  stagger: 0.2, // cada p aparece tras la anterior
+  stagger: 0.3, // cada p aparece tras la anterior
   scrollTrigger: {
     trigger: ".focus-words",
     start: "top 80%",
@@ -363,24 +345,6 @@ gsap.from(".focus-words p", {
     once: true,
   },
 });
-
-// const cards = gsap.utils.toArray(".container-projects .project.reveal");
-
-// gsap
-//   .timeline({
-//     scrollTrigger: {
-//       trigger: ".container-projects",
-//       start: "top 80%",
-//       once: true,
-//     },
-//   })
-//   .from(cards, {
-//     y: 40,
-//     opacity: 0,
-//     duration: 0.8,
-//     ease: "power2.out",
-//     stagger: 0.2,
-//   });
 
 // ==========================================================================
 // 4. SKILL BARS ANIMATION
@@ -398,6 +362,37 @@ gsap.from(".focus-words p", {
  * HTML: <div class="skill-bar" data-width="95"></div>
  * JS: bar.dataset.width → "95"
  */
+
+gsap.registerPlugin(ScrollTrigger);
+
+function initSkillBars() {
+  const skillBars = document.querySelectorAll(".skill-bar");
+
+  skillBars.forEach((bar) => {
+    const targetWidth = bar.dataset.width + "%";
+
+    if (prefersReducedMotion) {
+      bar.style.width = targetWidth;
+      return;
+    }
+
+    gsap.to(bar, {
+      width: targetWidth,
+      duration: 0.2,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: bar,
+        start: "top 90%",
+        toggleActions: "play none none none",
+      },
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  initSkillBars();
+});
+
 function initSkillBars() {
   const skillBars = document.querySelectorAll(".skill-bar");
 
