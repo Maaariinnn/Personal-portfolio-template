@@ -497,6 +497,7 @@ NOT FOUND PAGE
   position: relative;
   width: min(1200px, 90vw);
   height: 80vh;
+  max-height: 80vh;
   margin: 10vh auto;
 
   display: grid;
@@ -650,6 +651,7 @@ NOT FOUND PAGE
   /* 404 PAGE NOT FOUND  */
   .page-404 {
     height: 100vh !important;
+    max-height: 100vh;
     overflow-y: hidden;
     box-sizing: border-box;
     /* ajuste visual */
@@ -791,6 +793,7 @@ NOT FOUND PAGE
   .page-404 {
     margin: auto;
     height: 100vh !important;
+    max-height: 100vh;
     overflow-y: hidden;
     box-sizing: border-box;
     /* ajuste visual */
