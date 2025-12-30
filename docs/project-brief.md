@@ -11,19 +11,15 @@
 
 ### What are you building?
 
-<!-- Describe your project in 2-3 sentences -->
-
-Template de potfolio
+Un template de portfolio web moderno, minimalista y responsive, diseñado para mostrar proyectos de manera visual y clara, con secciones que permitan destacar cada trabajo individualmente.
 
 ### Who is it for?
 
-<!-- Define your target audience -->
+Estudiantes de diseño y creativos que necesitan un portfolio digital funcional y visualmente atractivo para mostrar su trabajo a clientes, empleadores o instituciones educativas.
 
 ### Why does it matter?
 
-<!-- Explain the purpose and value of your project -->
-
-Cumple con los estándares de responsividad y accesibilidad
+Cumple con los estándares de responsividad y accesibilidad, permitiendo que cualquier usuario, independientemente del dispositivo o de sus capacidades, pueda navegar de forma intuitiva y disfrutar del contenido visual del portfolio.
 
 ---
 
@@ -31,28 +27,27 @@ Cumple con los estándares de responsividad y accesibilidad
 
 ### Core Technologies
 
-- [ ] HTML5 (semantic markup)
-- [ ] CSS3 (responsive design)
-- [ ] JavaScript (if applicable)
-- [ ] Other: \***\*\_\_\_\*\***
-- [ ] GSap
+- HTML5 (semantic markup)
+- CSS3 (responsive design)
+- JavaScript (if applicable)
+- GSap
 
 ### Accessibility Goals
 
-- [ ] Semantic HTML structure
-- [ ] Proper heading hierarchy
-- [ ] Alt text for images
-- [ ] Keyboard navigation support
-- [ ] Color contrast compliance
-- [ ] Screen reader compatibility
+- Semantic HTML structure
+- Proper heading hierarchy
+- Alt text for images
+- Keyboard navigation support
+- Color contrast compliance
+- Screen reader compatibility
 
 ### Responsive Design Strategy
 
-- [ ] Mobile-first approach
-- [ ] Flexible grid system
-- [ ] Scalable typography
-- [ ] Optimized images
-- [ ] Touch-friendly interactions
+- Mobile-first approach
+- Flexible grid system
+- Scalable typography
+- Optimized images
+- Touch-friendly interactions
 
 ---
 
@@ -66,13 +61,13 @@ Cumple con los estándares de responsividad y accesibilidad
 
 ### Content Sources
 
-<!-- Where will your content come from? -->
+Imágenes y descripciones de proyectos personales, junto con elementos de diseño generados o sugeridos por IA para mejorar la claridad y la presentación visual.
 
 ### Multilingual Considerations
 
-- Primary language:
-- Secondary language (optional):
-- Translation strategy:
+- Primary language: Español
+- Secondary language (optional): Inglés
+- Translation strategy: Uso de archivos JSON para textos y un switch de idioma que permita cambiar entre español e inglés.
 
 ---
 
@@ -80,19 +75,22 @@ Cumple con los estándares de responsividad y accesibilidad
 
 ### Visual Style
 
-<!-- Describe your aesthetic approach -->
+Minimalista, moderno y limpio, con enfoque en la visualización de proyectos. Se prioriza la jerarquía visual y la legibilidad, usando animaciones sutiles para mejorar la experiencia de usuario sin sobrecargar el diseño.
 
 ### Color Palette
 
-<!-- List your main colors -->
+- Blanco y negro para textos y fondos
+- Azul para elementos destacados y secundarios (CTAs y hover)
 
 ### Typography
 
-<!-- What fonts/typeface approach will you use? -->
+- Articulat CF: sans serif geométrica y amigable, enfocada en legibilidad y simplicidad.
 
 ### Inspiration/References
 
-<!-- List 2-3 websites or designs that inspire your approach -->
+- Awwwards → sitios minimalistas y responsive
+- Dribbble → ejemplos de grids de proyectos y microinteracciones
+- Behance portfolios de diseñadores gráficos modernos
 
 ---
 
@@ -100,18 +98,18 @@ Cumple con los estándares de responsividad y accesibilidad
 
 ### Week 4 Goals
 
-- [ ] Functional homepage
-- [ ] Basic responsive layout
-- [ ] Core content in place
-- [ ] Accessible markup
+- Functional homepage
+- Basic responsive layout
+- Core content in place
+- Accessible markup
 
 ### Final Project Goals
 
-- [ ] Fully responsive across devices
-- [ ] Meets WCAG 2.1 AA standards
-- [ ] Fast loading performance
-- [ ] Complete content
-- [ ] Polished visual design
+- Fully responsive across devices
+- Meets WCAG 2.1 AA standards
+- Fast loading performance
+- Complete content
+- Polished visual design
 
 ---
 
@@ -119,10 +117,12 @@ Cumple con los estándares de responsividad y accesibilidad
 
 ### What excites you most about this project?
 
+Crear un portfolio que sea funcional y visualmente atractivo, que pueda ser usado como base para mostrar proyectos reales y que refleje mi estilo de diseño.
+
 ### What challenges do you anticipate?
+
+Lograr un equilibrio entre minimalismo y dinamismo visual, optimizando animaciones sin afectar la velocidad de carga y manteniendo la accesibilidad.
 
 ### How does this project connect to your learning goals?
 
----
-
-_This brief will evolve as your project develops. Update it as needed and reference it in your weekly commits._
+Me permite aplicar mis conocimientos de diseño web, UX/UI, accesibilidad y responsive design, consolidando un proyecto que puedo usar profesionalmente y como muestra de mis habilidades.

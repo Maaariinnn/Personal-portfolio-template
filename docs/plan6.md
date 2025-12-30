@@ -1,35 +1,56 @@
-# Plan 6 — Social Links Reveal desde la izquierda de forma secuencial"
+# Plan 6 — Reveal Secuencial de Social Links desde la Izquierda
 
-## Resumen del plan - Prompt
+## Resumen de la Feature
 
-Quiero que cada palabra de los social links aparezca desde la izquierda en orden al hacer scroll, de manera secuencial.
+**Objetivo:** Animar los enlaces sociales para que aparezcan secuencialmente desde la izquierda al hacer scroll, reforzando jerarquía visual y dinamismo.
+
+**Decisión final implementada:**
+
+- Estructura HTML con `<ul>` y `<li>` para control y accesibilidad.
+- Animación GSAP con `stagger`.
+- Activación mediante ScrollTrigger.
+- Respeto a `prefers-reduced-motion`.
+
+---
+
+## Prompt usado con IA
+
+Quiero que cada palabra de los social links aparezca
+desde la izquierda en orden al hacer scroll, de manera secuencial.
 
 ---
 
 ## Respuesta inicial de la IA
 
-- Primero sstructuré el HTML correctamente: <ul> conteniendo los <li> con los links dentro de .social-links.
-- Usé GSAP con ScrollTrigger para animar cada <li> desde la izquierda con stagger:
+- Estructurar HTML con `<ul>` y `<li>`.
+- Animar cada `<li>` con GSAP usando `x` y `opacity`.
+- Aplicar `stagger` para secuencia fluida.
 
+---
+
+## Solución final implementada
+
+```js
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", () => {
-const prefersReducedMotion = window.matchMedia(
-"(prefers-reduced-motion: reduce)"
-).matches;
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
 
-if (!prefersReducedMotion) {
-gsap.from(".social-links li", {
-x: -50,
-opacity: 0,
-duration: 0.6,
-ease: "power2.out",
-stagger: 0.2,
-scrollTrigger: {
-trigger: ".social-links",
-start: "top 85%",
-toggleActions: "play none none none",
-},
+  if (!prefersReducedMotion) {
+    gsap.from(".social-links li", {
+      x: -50,
+      opacity: 0,
+      duration: 0.6,
+      ease: "power2.out",
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".social-links",
+        start: "top 85%",
+        toggleActions: "play none none none",
+      },
+    });
+  }
 });
-}
-});
+```

@@ -1,33 +1,47 @@
-# Plan 4 — Solución para el Above The Fold en cualquier navegador"
+# Plan 4 — Corrección del Above The Fold en Hero (Viewport Dinámico)
 
-## Resumen del plan - Prompt
+## Resumen de la Feature
 
-Para el above the fold, (el hero en el html) yo tengo un texto (2026 Portfolio) que no se ve, ya que en el navegador la barra de búsqueda lo tapa. Como puedo recalcular esa distancia, para que el texto esté a la distancia indicada teniendo en cuenta esa barra del navegador (la altura de cada barra de navegador es diferente según el navegador y el móvil o tablet).
+**Objetivo:** Garantizar que el contenido principal del hero (Above The Fold) sea visible en todos los navegadores y dispositivos, evitando que la barra del navegador o UI del sistema tape el texto.
+
+**Decisión final implementada:**
+
+- Sustituir `100vh` por **Dynamic Viewport Units (`100dvh`)**.
+- Mantener fallback con `100vh` para compatibilidad.
+- Solución responsive y moderna, especialmente efectiva en mobile.
+
+---
+
+## Prompt usado con IA
+
+Para el above the fold (hero), el texto no se ve porque la barra del navegador lo tapa.
+¿Cómo puedo recalcular la altura para que tenga en cuenta la barra del navegador,
+teniendo en cuenta que varía según navegador y dispositivo?
 
 ---
 
 ## Respuesta inicial de la IA
 
-Esto es un problema real de diseño “above the fold”, sobre todo en mobile.
-La respuesta corta es: NO debes usar 100vh tal cual para el hero.
-La solución correcta hoy en día es usar las nuevas unidades dinámicas del viewport.
-Voy por partes, de forma clara y documentable.
+- No usar `100vh` directamente en mobile.
+- Usar **Dynamic Viewport Units**:
+  - `100dvh` tiene en cuenta la UI del navegador.
+  - Se recalcula automáticamente cuando la barra aparece/desaparece.
+- Añadir fallback para navegadores antiguos.
 
-- SOLUCIÓN MODERNA (la correcta en 2025)
-  Usa Dynamic Viewport Units:
-  👉 100dvh (dynamic viewport height)
-  .hero {
-  min-height: 100dvh;
-  }
-  ¿Qué hace?
-  dvh sí tiene en cuenta la barra del navegador
-  Se recalcula automáticamente cuando la barra aparece/desaparece
-  Funciona distinto según dispositivo → justo lo que necesitas
+---
 
-  ⚠️ Fallback (por compatibilidad total)
-  Aunque ya está muy bien soportado, puedes hacer esto:
-  .hero {
-  min-height: 100vh;
-  min-height: 100dvh;
-  }
-  El navegador que entienda dvh usará la segunda línea.
+## Problemas encontrados
+
+1. `100vh` ignora la barra del navegador en mobile.
+2. El texto quedaba oculto parcialmente en el hero.
+
+---
+
+## Solución final implementada
+
+```css
+.hero {
+  min-height: 100vh; /* Fallback */
+  min-height: 100dvh; /* Dynamic Viewport Height */
+}
+```
