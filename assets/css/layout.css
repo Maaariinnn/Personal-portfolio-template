@@ -496,15 +496,15 @@ NOT FOUND PAGE
 .page-404 {
   position: relative;
   width: min(1200px, 90vw);
-  height: 80vh;
-  max-height: 80vh;
+  min-height: 100svh;
+  /* max-height: 80vh; */
   margin: 10vh auto;
 
   display: grid;
   place-items: center;
 
   overflow: hidden;
-
+  box-sizing: border-box;
   /* ajuste visual */
   transform: translateY(-8%);
 }
@@ -657,10 +657,18 @@ NOT FOUND PAGE
     /* ajuste visual */
     transform: translateY(-8%);
     margin: auto;
+    padding-top: 8vh;
   }
 
+  .content-404 {
+    transform: translateY(56%);
+  }
   .content-404 a:first-child {
-    font-size: clamp(1rem, 4vw, 3rem);
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  .content-404 p:nth-child(2) {
+    margin-top: 0;
   }
 }
 
@@ -801,11 +809,13 @@ NOT FOUND PAGE
   }
 
   .bg-404 {
-    height: 100vh !important;
+    /* height: 100vh !important; */
+    margin-top: -6vh;
+    min-height: 100svh;
   }
 
   .content-404 {
-    transform: translateY(62%);
+    transform: translateY(48%);
   }
 
   .content-404 p:first-child {
