@@ -595,7 +595,7 @@ NOT FOUND PAGE
 }
 
 .content-404 p:first-child {
-  font-size: clamp(2rem, 4vw, 5rem);
+  font-size: clamp(3rem, 4vw, 5rem);
   /* font-weight: 600; */
 }
 
@@ -693,6 +693,18 @@ NOT FOUND PAGE
 
   .footer-text {
     font-size: 16vw;
+  }
+
+  /* 404 PAGE NOT FOUND  */
+  .page-404 {
+    /* min-height: 100vh;
+    min-height: 100dvh; */
+
+    height: 100vh important;
+    overflow-y: hidden;
+    box-sizing: border-box;
+    /* 👇 ajuste visual */
+    transform: translateY(-8%);
   }
 }
 
@@ -822,6 +834,37 @@ NOT FOUND PAGE
 
   .footer-text {
     font-size: 16vw;
+  }
+
+  /* 404 PAGE NOT FOUND  */
+  .page-404 {
+    height: 100vh;
+    margin: auto;
+    height: 100vh important;
+    overflow-y: hidden;
+    box-sizing: border-box;
+    /* 👇 ajuste visual */
+    transform: translateY(-8%);
+  }
+
+  .bg-404 {
+    height: 100vh;
+  }
+
+  .content-404 {
+    transform: translateY(62%);
+  }
+
+  .content-404 p:first-child {
+    line-height: 1.2;
+  }
+
+  .content-404 p:nth-child(2) {
+    margin-top: 1rem;
+  }
+
+  .content-404 > .cta-AllWorks > p:first-child {
+    font-size: clamp(1.5rem, 4vw, 3rem);
   }
 }
 

@@ -757,3 +757,10 @@ if (!prefersReducedMotion) {
     word.style.color = "#ffffff";
   });
 }
+
+// Forzar reproducción con JS si falla
+const video = document.getElementById("heroVideo");
+video.play().catch(() => {
+  // fallback: muestra un poster o espera click
+  console.log("Autoplay bloqueado, espera interacción del usuario");
+});
