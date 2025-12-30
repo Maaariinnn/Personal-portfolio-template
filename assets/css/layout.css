@@ -498,7 +498,7 @@ NOT FOUND PAGE
   width: min(1200px, 90vw);
   min-height: 100svh;
   /* max-height: 80vh; */
-  margin: 10vh auto;
+  margin: auto;
 
   display: grid;
   place-items: center;
@@ -801,21 +801,21 @@ NOT FOUND PAGE
   .page-404 {
     margin: auto;
     height: 100vh !important;
-    max-height: 100vh;
+    /* max-height: 100vh; */
+    max-height: 100svh;
     overflow-y: hidden;
     box-sizing: border-box;
     /* ajuste visual */
-    transform: translateY(-8%);
+    transform: translateY(-14%);
   }
 
   .bg-404 {
     /* height: 100vh !important; */
     margin-top: -6vh;
-    min-height: 100svh;
   }
 
   .content-404 {
-    transform: translateY(48%);
+    transform: translateY(20%);
   }
 
   .content-404 p:first-child {
