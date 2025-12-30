@@ -649,11 +649,16 @@ NOT FOUND PAGE
 
   /* 404 PAGE NOT FOUND  */
   .page-404 {
-    height: 100vh important;
+    height: 100vh !important;
     overflow-y: hidden;
     box-sizing: border-box;
     /* ajuste visual */
     transform: translateY(-8%);
+    margin: auto;
+  }
+
+  .content-404 a:first-child {
+    font-size: clamp(1rem, 4vw, 3rem);
   }
 }
 
@@ -784,9 +789,8 @@ NOT FOUND PAGE
 
   /* 404 PAGE NOT FOUND  */
   .page-404 {
-    height: 100vh;
     margin: auto;
-    height: 100vh important;
+    height: 100vh !important;
     overflow-y: hidden;
     box-sizing: border-box;
     /* ajuste visual */
@@ -794,7 +798,7 @@ NOT FOUND PAGE
   }
 
   .bg-404 {
-    height: 100vh;
+    height: 100vh !important;
   }
 
   .content-404 {
@@ -809,7 +813,7 @@ NOT FOUND PAGE
     margin-top: 1rem;
   }
 
-  .content-404 > .cta-AllWorks > p:first-child {
+  .content-404 a:first-child {
     font-size: clamp(1.5rem, 4vw, 3rem);
   }
 }
