@@ -529,6 +529,90 @@ FOOTER SECTION
   margin: 0;
 }
 
+/* 
+--------------------------------------------------------------------------
+NOT FOUND PAGE
+-------------------------------------------------------------------------- */
+
+.page-404 {
+  /* position: relative;
+  width: min(1200px, 90vw);
+  height: 80vh;
+  margin: 10vh auto;
+
+  overflow: hidden; */
+  position: relative;
+  width: min(1200px, 90vw);
+  height: 80vh;
+  margin: 10vh auto;
+
+  display: grid;
+  place-items: center;
+
+  overflow: hidden;
+
+  /* 👇 ajuste visual */
+  transform: translateY(-8%);
+}
+
+/* 404 gigante */
+.bg-404 {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: clamp(10rem, 30vw, 28rem);
+  font-weight: 700;
+  line-height: 0.85;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.05)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Contenido central */
+.content-404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  /* max-width: 90vw; */
+  align-items: center;
+  text-align: center;
+
+  transform: translateY(82%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+}
+
+.content-404 p:first-child {
+  font-size: clamp(2rem, 4vw, 5rem);
+  /* font-weight: 600; */
+}
+
+.content-404 p:nth-child(2) {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  /* font-size: 0.95rem; */
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.content-404 > .cta-AllWorks > p:first-child {
+  font-size: clamp(1rem, 4vw, 3rem);
+  /* font-size: 16px; */
+}
+
 @media screen and (max-width: 768px) {
   /* SECTION HERO */
   .container-info-home p:last-child {
